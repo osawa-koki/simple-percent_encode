@@ -1,5 +1,5 @@
 /* 公開時のサブディレクトリ */
-const SUB_DIRECTORY = "/simple-base64";
+const SUB_DIRECTORY = "/simple-percent_encode";
 
 /* 本番環境と開発環境の分岐用のフラグ */
 const isProd = process.env.NODE_ENV === "production";
