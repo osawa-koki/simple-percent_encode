@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../components/Layout";
 
-const letters_need_to_percent_encode = ':/?#[]@!$&\'()*+,;='.split('');
+const letters_need_to_percent_encode = ':/?#[]@!$&\'()*+,;=%'.split('');
 
 export default function AbutPage() {
   return (
