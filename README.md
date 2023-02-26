@@ -1,6 +1,6 @@
-# simple-base64
+# simple-percent_encode
 
-🦖🦖🦖 データをBASE64エンコード・デコードするサイトです。  
+🦤🦤🦤 データをパーセント(URL)エンコード・デコードするサイトです。  
 
 ![成果物](./docs/img/fruit.gif)  
 

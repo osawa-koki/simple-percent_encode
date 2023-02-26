@@ -14,7 +14,7 @@ export default function DecoderPage() {
     if (text === null) {
       return;
     }
-    const decoded = Buffer.from(text, 'base64').toString('utf-8');
+    const decoded = decodeURIComponent(text);
     setResult(decoded);
   };
 
@@ -32,11 +32,11 @@ export default function DecoderPage() {
   return (
     <Layout>
       <div id="Decoder">
-        <h1>BASE64 Decoder</h1>
-        <p>BASE64形式のデータをデコードします。</p>
+        <h1>Percent Decoder</h1>
+        <p>パーセントエンコードされたデータをデコードします。</p>
         <Form>
           <Form.Group className="mb-3">
-            <Form.Label>BASE64エンコードされたデータ</Form.Label>
+            <Form.Label>パーセントエンコードされたデータ</Form.Label>
             <Form.Control as="textarea" rows={7} onInput={(e) => {setResult(null); setMessage(null); setText((e.target as HTMLTextAreaElement).value)}} />
           </Form.Group>
           <Button variant="primary" onClick={Decode}>
