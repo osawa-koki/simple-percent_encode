@@ -14,7 +14,7 @@ export default function EncoderPage() {
     if (text === null) {
       return;
     }
-    const encoded = Buffer.from(text).toString('base64');
+    const encoded = encodeURIComponent(text);
     setResult(encoded);
   };
 
@@ -32,8 +32,8 @@ export default function EncoderPage() {
   return (
     <Layout>
       <div id="Encoder">
-        <h1>BASE64 Encoder</h1>
-        <p>データをBASE64形式に変換します。</p>
+        <h1>Percent Encoder</h1>
+        <p>文字列をパーセントエンコードします。</p>
         <Form>
           <Form.Group className="mb-3">
             <Form.Label>変換するデータ</Form.Label>
@@ -49,7 +49,7 @@ export default function EncoderPage() {
               <hr />
               <Form className="mt-3">
                 <Form.Group className="mb-3">
-                  <Form.Label>BASE64エンコードされたデータ</Form.Label>
+                  <Form.Label>パーセントエンコードされたデータ</Form.Label>
                   <Form.Control as="textarea" rows={7} value={result} readOnly />
                 </Form.Group>
                 <Button variant="success" onClick={Copy}>
